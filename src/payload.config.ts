@@ -24,7 +24,7 @@ export default buildConfig({
   email: nodemailerAdapter({
     defaultFromAddress: process.env.SMTP_FROM || 'noreply@cms.edu.br',
     defaultFromName: process.env.SMTP_FROM_NAME || 'CMS',
-    
+
     ...(process.env.SMTP_HOST && {
       transportOptions: {
         host: process.env.SMTP_HOST,
